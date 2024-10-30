@@ -1,0 +1,43 @@
+Input:
+  - RGB Node # ok
+  - Texture Coordinate Node # ok
+  - Game Node # > [Gametime, Daytime, Sun Angle, Moon Angle]
+  - Value Node
+  - Fresnel Node # ok
+Output:
+  - Vertex Shader Node
+  - Frag Shader Node
+Texture:
+  - Brick Texture Node
+  - Checker Texture Node
+  - Gradient Texture Node
+  - Image Texture Node
+  - Noise Texture Node # ok
+  - White Noise Texture Node # ok
+  - Wave Texture
+  - Voronoi Texture Node # ok
+Color:
+  - Bright/Contrast Node
+  - Gamma Node
+  - HSL Node
+  - Invert Node
+  - Light Falloff Node
+  - Mix Node # ok
+  - RGB Curves Node
+Vector:
+  - Mapping Node
+  - Normal Node
+  - Vector Curves Node
+  - Vector Rotate Node
+  - Vector Transform Node
+Converter:
+  - Blackbody Node
+  - Clamp Node
+  - Color Ramp Node # ok
+  - Combine/Separate Nodes (XYZ, RGB) # ok
+  - Float Curve
+  - Map Range Node
+  - Math Node # ok
+  - Grayscale Node
+  - Vector Math Node # ok
+  - Wavelength Node

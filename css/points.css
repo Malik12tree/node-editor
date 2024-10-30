@@ -1,0 +1,48 @@
+/* Display */
+.valpoint {
+	position: absolute;
+    padding: 10px;
+    border-radius: 20%;
+}
+.valpoint.left {
+    left: 0;
+    transform: translateX(-50%) rotate(45deg);
+}
+.valpoint.right {
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+}
+/* Nice Help Indicators +Styles*/
+.valpoint::after {
+    font-family: monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+    font-weight: 900;
+    font-size: 0.5rem;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.valpoint[vstyle=any]::after { content: '?' }
+.valpoint[vstyle=vector]::after { content: '■'; color: #0009; transform: translate(-50%, -50%) }
+
+/* Styles */
+.valpoint::before { background-color: var(--color-subtle) }
+.valpoint[vstyle=vector]::before { background-color: var(--decor-axis-xyz) }
+.valpoint[vstyle=color]::before { background-color: var(--decor-color) }
+.valpoint[vstyle=any]::before { background-color: hsl(40, 73%, 60%) }
+
+/* Flexiable Draggin */
+.valpoint::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 4px;
+    transform: translate(-50%, -50%);
+}
+
+/* Vector Fix */
+.entry:not(.connected) .valpoint.left[vstyle=vector] {
+    margin-top: 1.45em;
+}
